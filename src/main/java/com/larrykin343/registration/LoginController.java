@@ -53,11 +53,12 @@ public class LoginController {
         //taking the user inputs
         String username = usernameTextField.getText();
         String password = enterPasswordField.getText();
+        //this is the query to check if the login credentials are correct
         String verifyLogin = "SELECT count(1) FROM user_account WHERE username = '" + username + "' AND password = '" + password + "'";
 
         try {
-            Statement statement = connectDB.createStatement();
-            ResultSet queryResult = statement.executeQuery(verifyLogin);
+            Statement statement = connectDB.createStatement();//
+            ResultSet queryResult = statement.executeQuery(verifyLogin);//executing the query
             //the queryResult will return a 1 if the login credentials are correct and a 0 if the login credentials are incorrect
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
