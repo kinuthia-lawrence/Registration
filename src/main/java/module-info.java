@@ -13,6 +13,7 @@ module com.larrykin343.registration {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires mysql.connector.j;
 
     opens com.larrykin343.registration to javafx.fxml;
     exports com.larrykin343.registration;
