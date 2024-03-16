@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.larrykin343.registration.Register"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="491.0" maxWidth="520.0" minHeight="400.0" minWidth="520.0" prefHeight="491.0" prefWidth="520.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.larrykin343.registration.Register">
+   <children>
+      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #FF7F50;">
+         <children>
+            <ImageView fx:id="shieldImageView" fitHeight="40.0" fitWidth="70.0" layoutX="30.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                   <Image url="@../../../../../../../../Users/User/Pictures/icons/shield.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="90.0" layoutY="20.0" text="User Registration" textFill="#ebe2e2">
+               <font>
+                  <Font name="Segoe Print Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="91.0" layoutY="89.0" text="Firstname">
+         <font>
+            <Font name="Segoe Print" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstnameTextField" layoutX="91.0" layoutY="113.0" prefHeight="25.0" prefWidth="357.0" promptText="Firstname" />
+      <Label layoutX="91.0" layoutY="151.0" text="Lastname">
+         <font>
+            <Font name="Segoe Print" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastnameTextField" layoutX="91.0" layoutY="175.0" prefHeight="25.0" prefWidth="357.0" promptText="Lastname" />
+      <Label layoutX="91.0" layoutY="213.0" text="Username">
+         <font>
+            <Font name="Segoe Print" size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="91.0" layoutY="237.0" prefHeight="25.0" prefWidth="357.0" promptText="Username" />
+      <Label layoutX="92.0" layoutY="272.0" text="Password">
+         <font>
+            <Font name="Segoe Print" size="13.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="enterPasswordField" layoutX="92.0" layoutY="296.0" prefHeight="25.0" prefWidth="357.0" promptText="Password" />
+      <Label alignment="CENTER" layoutY="464.0" maxHeight="32.0" minHeight="14.0" prefHeight="26.0" prefWidth="520.0" text="Copyright © 2024 LarryKin343. All rights reserved." textFill="#6b6868">
+         <font>
+            <Font name="Segoe Print" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="332.0" text="Confirm Password">
+         <font>
+            <Font name="Segoe Print" size="13.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="confirmPasswordField" layoutX="91.0" layoutY="356.0" prefHeight="25.0" prefWidth="357.0" promptText="Confirm Password" />
+      <Button fx:id="closeButton" layoutX="91.0" layoutY="408.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #ff7f50;" text="Close" textFill="#f8f4f4">
+         <font>
+            <Font name="Segoe Print Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="registerButton" layoutX="280.0" layoutY="408.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #ff7f50;" text="Register" textFill="#fcf7f7">
+         <font>
+            <Font name="Segoe Print Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

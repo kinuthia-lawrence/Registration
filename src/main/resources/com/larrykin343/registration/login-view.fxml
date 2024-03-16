@@ -41,7 +41,7 @@
                   <Font name="Segoe Print" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="invalidTextField" alignment="CENTER" layoutX="3.0" layoutY="184.0" prefHeight="32.0" prefWidth="365.0" text="Invalid Login. Please try Again!" textFill="#fc0707">
+            <Label fx:id="invalidTextField" alignment="CENTER" layoutX="3.0" layoutY="184.0" prefHeight="32.0" prefWidth="365.0" textFill="#fc0707">
                <font>
                   <Font name="Segoe Print" size="17.0" />
                </font>
