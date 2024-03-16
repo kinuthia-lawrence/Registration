@@ -14,11 +14,6 @@
                   <Image url="@../../../../../../../../Users/User/Pictures/icons/digitalLibrary.png" />
                </image>
             </ImageView>
-            <Button fx:id="cancelButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="206.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#cancelButtonOnAction" prefHeight="188.0" prefWidth="222.0" style="-fx-background-color: #FF7F50;" text="   STUDENT GRADE    MANAGMENT SYSTEM" textFill="#eeeded" wrapText="true">
-               <font>
-                  <Font name="Segoe Print Bold" size="17.0" />
-               </font>
-            </Button>
          </children></AnchorPane>
    </left>
    <center>
@@ -43,7 +38,7 @@
             </Label>
             <Label fx:id="invalidTextField" alignment="CENTER" layoutX="3.0" layoutY="184.0" prefHeight="32.0" prefWidth="365.0" textFill="#fc0707">
                <font>
-                  <Font name="Segoe Print" size="17.0" />
+                  <Font name="Segoe Print" size="13.0" />
                </font>
             </Label>
             <Button fx:id="cancelButton" layoutX="36.0" layoutY="313.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="44.0" prefWidth="311.0" style="-fx-background-color: #FF7F50;" text="Cancel" textFill="#eeeded">

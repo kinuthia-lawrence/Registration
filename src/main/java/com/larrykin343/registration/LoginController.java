@@ -3,11 +3,14 @@ package com.larrykin343.registration;
 import com.almasb.fxgl.entity.action.Action;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -32,6 +35,7 @@ public class LoginController {
     public void loginButtonOnAction(ActionEvent event) {
         if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {
             checkLoginCredentials();
+
 
         } else {
             invalidTextField.setText("Please enter your username and password!!!");
@@ -62,7 +66,8 @@ public class LoginController {
             //the queryResult will return a 1 if the login credentials are correct and a 0 if the login credentials are incorrect
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
-                    invalidTextField.setText("Login Successful");
+//                    invalidTextField.setText("Login Successful");
+                    registerForm();
                 } else {
                     invalidTextField.setText("Invalid Login Credentials. Please try again!!!");
                 }
@@ -77,6 +82,23 @@ public class LoginController {
                 throwables.printStackTrace();
                 throwables.getCause();
             }
+        }
+    }
+
+    private void registerForm() {
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(LoginController.class.getResource("register.fxml"));
+            Stage RegisterStage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load());
+            RegisterStage.initStyle(StageStyle.UNDECORATED);
+            RegisterStage.setScene(scene);
+            RegisterStage.show();
+            Stage stage = (Stage) loginButton.getScene().getWindow();
+            stage.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
         }
     }
 }
